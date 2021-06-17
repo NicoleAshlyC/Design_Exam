@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Sliding Testing</title>
+
+  <script src="jquery.js"></script> 
+	<style type="text/css">
+
+.dot, .dot1 {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover, .dot1:hover {
+  background-color: white;
+}
+
+ 
+.Banner{
+	/*width: 100%;*/
+	position: absolute;
+}
+
+.sliders{
+	position: absolute; 
+	margin-top: 73%; 
+	/*margin-top: 48%; */ /*for width 100;*/ 
+	margin-left: 70%;
+
+}
+.slide{
+	margin-top: -10%;
+}
+
+
+</style>
+</head>
+<body>
+
+
+<table>
+	<!-- SLIDING -->
+	<tr class="slide">
+		<td><img src="images/Banner1.jpg" class="Banner" alt=""  > 
+		 <img src="images/Banner3.jpg" class="Banner" alt=""  > 
+		 <img src="images/Banner2.jpg" class="Banner" alt=""  >
+			<div class="sliders"> 
+ 				<span class="dot" onclick="currentSlide(1)"></span>
+  				<span class="dot" onclick="currentSlide(2)"></span> 
+  				<span class="dot" onclick="currentSlide(3)"></span> 
+			</div>
+		</td>
+
+	</tr>
+</table>
+ 
+</body>
+
+ 
+
+
+
+var BannerCount = 1;
+showSlides(BannerCount);
+
+function plusSlides(n) {
+  showSlides(BannerCount += n);
+}
+
+function currentSlide(n) {
+  showSlides(BannerCount = n);
+}s
+
+function showSlides(n) {
+  var i;
+  var banner = document.getElementsByClassName("Banner");
+  var dots = document.getElementsByClassName("dot");
+  if (n > banner.length) {BannerCount = 1}    
+  if (n < 1) {BannerCount = banner.length}
+  for (i = 0; i < banner.length; i++) {
+      banner[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  banner[BannerCount-1].style.display = "block";  
+  dots[BannerCount-1].className += " active";
+}
+
+</script>
+</html>

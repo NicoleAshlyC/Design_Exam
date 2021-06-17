@@ -1,0 +1,85 @@
+#ThisModal{
+  display: none;
+  z-index: 1;
+  position: absolute;
+  background-color: white;
+}
+.icon{
+  position: relative;
+  float: left;
+  margin-left: 7%;
+  margin-top: -24px;
+  z-index: 2;
+  color: #ff6b6b;
+
+  }
+
+  input[type='text']::placeholder,input[type='email']::placeholder, input[type='textarea']::placeholder{
+  text-align: center;   
+}
+
+.form-control{
+  /*width: 60%;
+  margin-left:5%;
+  margin-right:5%;*/
+  align-content: center;
+}
+
+.Headfixed {
+    position: fixed;
+    top:0; left:0;
+    width: 100%; }
+
+.dot, .dot1 {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover, .dot1:hover {
+  background-color: white;
+}
+
+ 
+.Banner{
+	/*width: 100%;*/
+	/*position: absolute;*/
+}
+
+.sliders{
+	position: absolute; 
+	margin-top: -3%; 
+	/*margin-top: 48%; */ /*for width 100;*/ 
+	margin-left: 70%;
+
+}
+.slide{
+	margin-top: -10%;
+}
+
+
+.rounded-pill{
+    background-color: #ff6b6b;
+    color: white;
+    margin-top: 3%;
+    padding: 9px;
+    font-size: 18px;
+    font-weight: bold;
+     
+    border:none;
+  }
+.GetInTouch{
+  margin-top: 3%;
+}
+.btn_Touch{
+  cursor: pointer;
+}
+
+#FootIcon{
+  cursor: pointer;
+}
